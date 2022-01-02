@@ -2,6 +2,14 @@ const Medico = require("../models/medicos")
 
 module.exports = server =>{
 
+    server.get('/', (req, res)=>{
+
+        res.send("<h1>Bem-vindo a aplicação Teste_Medico</h1>")
+      
+        
+
+    })
+
 
     server.post('/medico', checkCampos , (req, res)=>{
         
