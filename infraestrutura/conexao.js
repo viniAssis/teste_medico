@@ -3,10 +3,10 @@ const conexao = mysql.createConnection({
     
     host: 'mysql-container',
     user:'root',
-    ports: 3308,  
-    password:'',
+    ports: 3306,  
+    password:'root',
     database:'base_medico',
-    
+    insecureAuth : true
 
 })
 
