@@ -1,6 +1,6 @@
 # teste_medico #
 
-API desenvolvida em Nodejs, Mysql
+API desenvolvida em Nodejs e Mysql
 
 ## Link Postman Workspace ##
 
