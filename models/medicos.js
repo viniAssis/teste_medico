@@ -159,8 +159,8 @@ class Medico{
 
     pesquisaNome(nome, res){
         
-        
-        const sql = "SELECT *  FROM medico where nome=? and deletado= 0";
+        nome = '%'+nome+'%';
+        const sql = `SELECT *  FROM medico where nome like ? and deletado= 0`;
         
         conexao.query(sql, nome, (erro, resultados, campos) =>{
             if(erro){
@@ -190,8 +190,8 @@ class Medico{
 
     pesquisaTelefone(telefone, res){
         
-        
-        const sql = "SELECT *  FROM medico where telefone=? and deletado= 0";
+        telefone = '%'+telefone+'%';
+        const sql = "SELECT *  FROM medico where telefone like ? and deletado= 0";
         
         conexao.query(sql, telefone, (erro, resultados, campos) =>{
             if(erro){
@@ -252,8 +252,8 @@ class Medico{
 
     pesquisaCep(cep, res){
         
-        
-        const sql = "SELECT *  FROM medico where cep=? and deletado= 0";
+        cep = '%'+cep+'%';
+        const sql = "SELECT *  FROM medico where cep like ? and deletado= 0";
         
         conexao.query(sql, cep, (erro, resultados, campos) =>{
             if(erro){
@@ -283,8 +283,8 @@ class Medico{
 
     pesquisaLogradouro(logradouro, res){
         
-        
-        const sql = "SELECT *  FROM medico where logradouro=? and deletado= 0";
+        logradouro = '%'+logradouro+'%';
+        const sql = "SELECT *  FROM medico where logradouro like ? and deletado= 0";
         
         conexao.query(sql, logradouro, (erro, resultados, campos) =>{
             if(erro){
@@ -314,8 +314,8 @@ class Medico{
 
     pesquisaBairro(bairro, res){
         
-        
-        const sql = "SELECT *  FROM medico where bairro=? and deletado= 0";
+        bairro = '%'+bairro+'%';
+        const sql = "SELECT *  FROM medico where bairro like ? and deletado= 0";
         
         conexao.query(sql, bairro, (erro, resultados, campos) =>{
             if(erro){
@@ -345,8 +345,8 @@ class Medico{
 
     pesquisaLocalidade(localidade, res){
         
-        
-        const sql = "SELECT *  FROM medico where localidade=? and deletado= 0";
+        localidade = '%'+localidade+'%';
+        const sql = "SELECT *  FROM medico where localidade like ? and deletado= 0";
         
         conexao.query(sql, localidade, (erro, resultados, campos) =>{
             if(erro){
